@@ -12,7 +12,6 @@ EXPOSE 8000
 ARG DEV=false
 RUN python3 -m venv /py && \
     /py/bin/pip install --upgrade pip && \
-    pip install flake8 && \
     apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-build-deps \
     build-base postgresql-dev musl-dev && \
